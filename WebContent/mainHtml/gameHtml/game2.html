@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+html {
+    margin: 0px;
+    height: 100%;
+} body {
+    margin: 0px;
+    height: 100%;
+    font-family: "Trebuchet MS";
+    background-color: white;
+} #game {
+    background-color: #222;
+    /*vertical-align: bottom;*/
+    display: block;
+    position: absolute;
+} #overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: 200ms;
+  opacity: 0;
+} #dp {
+  color: #AAA;
+  font-family: arial;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75%;
+  background: white;
+  text-align: center;
+  overflow: auto;
+} #restart_b {
+  color: #777;
+  cursor: pointer;
+  transition: 300ms;
+} #restart_b:hover {
+  color: #333;
+} #the_score {
+  color: #CCC;
+}
+</style>
+</head>
+<body onresize="sizeWindow()">
+  <canvas id="game" width="0" height="0" style="transition: 200ms"></canvas>
+  <div id="overlay">
+    <div id="dp">
+      <h1>Hi player</h1>
+      <h2>Your Score: <div id="the_score" style="display: inline"></div></h2>
+      <h3>Your time: <div id="the_time" style="display: inline"></div></h3>
+      <div id="hs_s" style="display:none">
+        <h2>Highscores:</h2>
+        <ol>
+          <li id="hs_1">_</li>
+          <li id="hs_2">_</li>
+          <li id="hs_3">_</li>
+        </ol>
+      </div>
+      <div id="restart_b" onclick="player.respawn()">play again
+        </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/avoidGame.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        html {
+            margin: 0px;
+            height: 100%;
+        }
+
+        body {
+            margin: 0px;
+            height: 100%;
+            font-family: "Trebuchet MS";
+            background-color: white;
+        }
+
+        #overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: none;
+            transition: 200ms;
+            opacity: 0;
+        }
+
+        #dp {
+            color: #AAA;
+            font-family: arial;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 75%;
+            background: white;
+            text-align: center;
+            overflow: auto;
+        }
+
+        #restart_b {
+            color: #777;
+            cursor: pointer;
+            transition: 300ms;
+        }
+
+            #restart_b:hover {
+                color: #333;
+            }
+
+        #the_score {
+            color: #CCC;
+        }
+        #myCanvas {
+            border: 1px solid #d3d3d3;
+            background-color: #222;
+            width = 1000;
+            height = 616;
+            position: absolute;
+        }
+    </style>
+</head>
+<body onresize="sizeWindow()">
+    <div style="background-color: #222;">
+        <canvas id="myCanvas" width="1000" height="400"></canvas>
+        <div id="overlay">
+            <div id="dp">
+                <h1>HI baby</h1>
+                <h2>Your Score: <div id="the_score" style="display: inline"></div></h2>
+                <h3>Your time: <div id="the_time" style="display: inline"></div></h3>
+                <div id="restart_b" onclick="location.href='game1.html'">play again
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/brickGame.js"></script>
+    </div>
+</body>
+</html>
